@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #1a1a1a 0%, #2a2420 100%);
+  color: #e8e6e3;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Gallery */
+.gallery {
+  flex: 1;
+  max-width: 520px;
+  text-align: center;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.45);
+}
+
+.thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.thumbs img {
+  width: 80px;
+  height: 115px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.55;
+  border-radius: 4px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.thumbs img:hover,
+.thumbs img.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Details */
+.details {
+  flex: 1;
+  max-width: 6;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: #f2f0ed;
+}
+
+.subtitle {
+  margin-top: 4px;
+  font-size: 1.4rem;
+  font-family: 'Cormorant Garamond', serif;
+  opacity: 0.85;
+}
+
+.price {
+  font-size: 1.7rem;
+  margin: 22px 0;
+  color: #b8d4ff;
+  font-weight: 500;
+}
+
+.description {
+  margin: 25px 0;
+  line-height: 1.7;
+  color: #dcd7d2;
+  font-size: 1.05rem;
+}
+
+.meta {
+  margin: 25px 0;
+  line-height: 1.7;
+  color: #c8c3be;
+  font-size: 0.98rem;
+}
+
+/* Buttons */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.inline-form {
+  display: inline-block;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  color: #ffffff;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* PayPal */
+.btn-paypal {
+  background: #003087;
+  box-shadow: 0 4px 12px rgba(0,48,135,0.25);
+}
+.btn-paypal:hover {
+  box-shadow: 0 6px 16px rgba(0,48,135,0.35);
+}
+
+/* Revolut */
+.btn-revolut {
+  background: #335DFF;
+  box-shadow: 0 4px 12px rgba(51,93,255,0.25);
+}
+.btn-revolut:hover {
+  box-shadow: 0 6px 16px rgba(51,93,255,0.35);
+}
+
+/* Offline */
+.btn-offline {
+  background: #444;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.btn-offline:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  body {
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .details {
+    max-width: 600px;
+  }
+}

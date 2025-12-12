@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wrinkles – Paul Caruana</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LEFT: IMAGE GALLERY -->
+  <div class="gallery">
+    <img id="mainImage" class="main-image"
+         src="https://www.midseabooks.com/wp-content/uploads/Midsea-Books-Wrinkles-Paul-Caruana_1.png"
+         alt="Wrinkles book image">
+
+    <div class="thumbs">
+      <img src="https://www.midseabooks.com/wp-content/uploads/Midsea-Books-Wrinkles-Paul-Caruana_1.png" class="active" onclick="changeImage(this)">
+      <img src="https://www.midseabooks.com/wp-content/uploads/Midsea-Books-Wrinkles-Paul-Caruana_2.png" onclick="changeImage(this)">
+      <img src="https://www.midseabooks.com/wp-content/uploads/Midsea-Books-Wrinkles-Paul-Caruana_3.png" onclick="changeImage(this)">
+      <img src="https://www.midseabooks.com/wp-content/uploads/Midsea-Books-Wrinkles-Paul-Caruana_4.png" onclick="changeImage(this)">
+      <img src="https://www.midseabooks.com/wp-content/uploads/Midsea-Books-Wrinkles-Paul-Caruana_5.png" onclick="changeImage(this)">
+    </div>
+  </div>
+
+  <!-- RIGHT: DETAILS -->
+  <div class="details">
+    <h1>Wrinkles</h1>
+    <div class="subtitle">By Paul Caruana</div>
+
+    <div class="price">€75.00</div>
+
+    <div class="description">
+      Paul Caruana’s <em>Wrinkles</em> speaks to the Child of each and every one of us who is open to listen and encourages us to find our guiding light, even when none is given to us, and then express it in our unique way — the way he did with his captivating art.<br><br>
+      <strong>– Dr Moira Borg</strong>
+    </div>
+
+    <div class="meta">
+      <strong>Weight:</strong> 1800 g<br>
+      <strong>Dimensions:</strong> 21.0 × 24.0 cm<br>
+      <strong>Format:</strong> Hardback<br>
+      <strong>Language:</strong> English<br>
+      <strong>Year:</strong> 2025<br>
+      <strong>Pages:</strong> 272
+    </div>
+
+    <div class="button-row">
+
+      <!-- PayPal -->
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="inline-form">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="XAALXVYTBQRHG" />
+        <input type="hidden" name="currency_code" value="EUR" />
+        <button type="submit" class="btn btn-paypal">Pay by PayPal</button>
+      </form>
+
+      <!-- Revolut -->
+      <a href="https://revolut.me/alberthc?currency=EUR&amount=7500&note=Wrinkles%20by%20Paul%20Caruana"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-revolut">
+         Pay by Revolut
+      </a>
+
+      <!-- Offline -->
+      <a href="https://forms.gle/YRqBuYNyFGC6uipk7"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-offline">
+         Request Order Form
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  function changeImage(el) {
+    document.getElementById("mainImage").src = el.src;
+    document.querySelectorAll(".thumbs img").forEach(img => img.classList.remove("active"));
+    el.classList.add("active");
+  }
+</script>
+
+</body>
+</html>
