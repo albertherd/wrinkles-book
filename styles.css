@@ -199,3 +199,11 @@ h1 {
         max-width: 600px;
     }
 }
+
+.page-description {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
