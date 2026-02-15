@@ -44,61 +44,63 @@
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Book",
+            "@type": "Product",
             "name": "Wrinkles",
-            "alternateName": ["Wrinkles Book", "Paul Caruana Wrinkles"],
-            "isbn": "978-9918-25-067-7",
-            "datePublished": "2025",
-            "inLanguage": "en",
-            "bookFormat": "https://schema.org/Hardcover",
-            "author": {
-                "@type": "Person",
-                "name": "Paul Caruana",
-                "sameAs": [
-                    "https://www.wikidata.org/wiki/Q233",
-                    "https://en.wikipedia.org/wiki/Valletta",
-                    "https://www.midseabooks.com"
-                ],
-                "knowsAbout": [
-                    "Malta", 
-                    "Watercolor painting", 
-                    "Valletta"
-                ],
-                "workLocation": {
-                    "@type": "Place",
-                    "name": "Valletta, Malta",
-                    "sameAs": "https://www.wikidata.org/wiki/Q233"
-                }
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "Midsea Books", 
-                "location": "Malta",
-                "sameAs": "https://midseabooks.com"
-            },
-            "image": "https://wrinklesbook.com/images/1.jpeg",
             "description": "Wrinkles is a 272-page hardback art book by Maltese artist Paul Caruana, exploring age and the quiet beauty of lived experience in watercolor paintings.",
-            "genre": "Watercolor Art",
-            "review": {
-                "@type": "Review",
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5"
-                },
+            "image": "https://wrinklesbook.com/images/1.jpeg",
+            "gtin13": "9789918250677",
+            "isbn": "978-9918-25-067-7",
+            "mainEntity": {
+                "@type": "Book",
+                "name": "Wrinkles",
                 "author": {
                     "@type": "Person",
-                    "name": "Dr Moira Borg"
+                    "name": "Paul Caruana"
                 },
-                "reviewBody": "Paul Caruana's Wrinkles speaks to the Child of each and every one of us who is open to listen and encourages us to find our guiding light."
+                "contributor": {
+                    "@type": "Person",
+                    "name": "Dr Moira Borg",
+                    "jobTitle": "Foreword Author"
+                },
+                "bookFormat": "https://schema.org/Hardcover",
+                "numberOfPages": 272,
+                "inLanguage": "en",
+                "datePublished": "2025",
+                "isbn": "978-9918-25-067-7",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Midsea Books"
+                }
             },
             "offers": {
                 "@type": "Offer",
                 "price": "75.00",
                 "priceCurrency": "EUR",
+                "priceValidUntil": "2026-12-31",
                 "availability": "https://schema.org/InStock",
                 "url": "https://wrinklesbook.com",
                 "itemCondition": "https://schema.org/NewCondition",
                 "areaServed": ["Malta", "Gozo"],
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "MT",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                    "merchantReturnDays": 30,
+                    "returnMethod": "https://schema.org/ReturnByMail",
+                    "returnFees": "https://schema.org/FreeReturn"
+                },
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": "0",
+                        "currency": "EUR"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "MT"
+                    }
+                },
                 "availableDeliveryMethod": [
                     "https://schema.org/OnSitePickup",
                     "https://schema.org/FreightDelivery"
@@ -108,6 +110,19 @@
                     "name": "Midsea Books",
                     "areaServed": "Malta"
                 }
+            },
+            "review": {
+                "@type": "Review",
+                "name": "Foreword by Dr Moira Borg",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Dr Moira Borg"
+                },
+                "reviewBody": "Excerpt from the Foreword: \"Paul Caruana's Wrinkles speaks to the Child of each and every one of us who is open to listen and encourages us to find our guiding light.\""
             }
         }
     </script>
@@ -181,7 +196,7 @@
                 <p>
                     Paul Caruana's <em>Wrinkles</em> speaks to the Child of each and every one of us who is open to listen. It encourages us to find our guiding light—even when none is given—and express it in our unique way, just as he did with his captivating art.
                 </p>
-                <cite>- Dr Moira Borg</cite>
+                <cite>From the Foreword by Dr Moira Borg</cite>
             </div>
             
             <section class="meta" aria-label="Product Information">
