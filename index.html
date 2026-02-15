@@ -10,13 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.min.css">
     <meta name="description" content="Wrinkles is the new 272-page art book by Paul Caruana. Featuring watercolor paintings that explore the character of age. Buy Paul Caruana's Wrinkles book online.">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Wrinkles Book by Paul Caruana">
     <meta property="og:description" content="The definitive art book by Paul Caruana. 'Wrinkles' features 272 pages of exquisite watercolor paintings exploring the beauty of age.">
-    <meta property="og:image" content="https://wrinklesbook.com/images/1.jpeg">
+    <meta property="og:image" content="https://wrinklesbook.com/images/wrinkles-book-cover.jpg">
     <meta property="og:image:width" content="600">
     <meta property="og:image:height" content="600">
     <meta property="og:url" content="https://wrinklesbook.com">
@@ -30,47 +30,43 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Wrinkles Book by Paul Caruana">
     <meta name="twitter:description" content="Discover 'Wrinkles', the new art book by Paul Caruana. 272 pages of watercolor portraits available now.">
-    <meta name="twitter:image" content="https://wrinklesbook.com/images/1.jpeg">
+    <meta name="twitter:image" content="https://wrinklesbook.com/images/wrinkles-book-cover.jpg">
     
     <link rel="canonical" href="https://wrinklesbook.com">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="/images/logo.svg">
     <link rel="icon" type="image/svg+xml" href="/images/logo.svg">
-    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="images/logo.svg">
-    <link rel="manifest" href="/manifest.json">
+
 
     <!-- Structured Data -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Book",
             "name": "Wrinkles",
             "description": "Wrinkles is a 272-page hardback art book by Maltese artist Paul Caruana, exploring age and the quiet beauty of lived experience in watercolor paintings.",
-            "image": "https://wrinklesbook.com/images/1.jpeg",
-            "gtin13": "9789918250677",
+            "image": "https://wrinklesbook.com/images/wrinkles-book-cover.jpg",
             "isbn": "978-9918-25-067-7",
-            "mainEntity": {
-                "@type": "Book",
-                "name": "Wrinkles",
-                "author": {
-                    "@type": "Person",
-                    "name": "Paul Caruana"
-                },
-                "contributor": {
-                    "@type": "Person",
-                    "name": "Dr Moira Borg",
-                    "jobTitle": "Foreword Author"
-                },
-                "bookFormat": "https://schema.org/Hardcover",
-                "numberOfPages": 272,
-                "inLanguage": "en",
-                "datePublished": "2025",
-                "isbn": "978-9918-25-067-7",
-                "publisher": {
-                    "@type": "Organization",
-                    "name": "Midsea Books"
-                }
+            "abridged": false,
+            "bookFormat": "https://schema.org/Hardcover",
+            "numberOfPages": 272,
+            "inLanguage": "en",
+            "datePublished": "2025",
+            "keywords": "art, watercolor, malta, valletta, portraiture, aging, book",
+            "author": {
+                "@type": "Person",
+                "name": "Paul Caruana",
+                "jobTitle": "Artist"
+            },
+            "contributor": {
+                "@type": "Person",
+                "name": "Dr Moira Borg",
+                "jobTitle": "Foreword Author"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Midsea Books",
+                "url": "https://mid seabooks.com/"
             },
             "offers": {
                 "@type": "Offer",
@@ -80,7 +76,10 @@
                 "availability": "https://schema.org/InStock",
                 "url": "https://wrinklesbook.com",
                 "itemCondition": "https://schema.org/NewCondition",
-                "areaServed": ["Malta", "Gozo"],
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "Malta"
+                },
                 "hasMerchantReturnPolicy": {
                     "@type": "MerchantReturnPolicy",
                     "applicableCountry": "MT",
@@ -107,13 +106,11 @@
                 ],
                 "seller": {
                     "@type": "Organization",
-                    "name": "Midsea Books",
-                    "areaServed": "Malta"
+                    "name": "Midsea Books"
                 }
             },
             "review": {
                 "@type": "Review",
-                "name": "Foreword by Dr Moira Borg",
                 "reviewRating": {
                     "@type": "Rating",
                     "ratingValue": "5"
@@ -122,6 +119,7 @@
                     "@type": "Person",
                     "name": "Dr Moira Borg"
                 },
+                "datePublished": "2025-01-01",
                 "reviewBody": "Excerpt from the Foreword: \"Paul Caruana's Wrinkles speaks to the Child of each and every one of us who is open to listen and encourages us to find our guiding light.\""
             }
         }
@@ -146,15 +144,15 @@
     <main class="container">
         <!-- Main keyword-rich description for screen readers/SEO -->
         <header class="page-header">
-             <h1 class="page-description">
+             <p class="page-description h1-style">
                 <strong>Paul Caruana Wrinkles Book</strong> - A 272‑page watercolor art book by Maltese artist <strong>Paul Caruana</strong>.
-            </h1>
+            </p>
         </header>
         <!-- LEFT: IMAGE GALLERY -->
         <section class="gallery" aria-label="Book Preview Gallery">
             <figure>
                 <img id="mainImage" class="main-image"
-                src="./images/1.jpeg"
+                src="./images/wrinkles-book-cover.jpg"
                 width="600" height="600"
                 fetchpriority="high"
                 alt="Cover of Paul Caruana Wrinkles Book - Hardback Art Book">
@@ -163,19 +161,19 @@
             
             <div class="thumbs" role="tablist" aria-label="Book Previews">
                 <button type="button" class="thumb-btn active" aria-controls="mainImage" aria-label="View cover" aria-selected="true" onclick="changeImage(this)">
-                    <img src="./images/1.jpeg" width="100" height="100" loading="lazy" decoding="async" alt="" data-alt="Paul Caruana Wrinkles Book Cover">
+                    <img src="./images/wrinkles-book-cover.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Paul Caruana Wrinkles Book Cover thumbnail" data-alt="Paul Caruana Wrinkles Book Cover">
                 </button>
                 <button type="button" class="thumb-btn" aria-controls="mainImage" aria-label="View Saints and Inlaws" aria-selected="false" onclick="changeImage(this)">
-                    <img src="./images/2.jpeg" width="100" height="100" loading="lazy" decoding="async" alt="" data-alt="Paul Caruana Watercolor Painting: Saints and Inlaws">
+                    <img src="./images/saints-and-inlaws-watercolor.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Watercolor painting 'Saints and Inlaws' thumbnail" data-alt="Paul Caruana Watercolor Painting: Saints and Inlaws">
                 </button>
                 <button type="button" class="thumb-btn" aria-controls="mainImage" aria-label="View Guarding the Covenant" aria-selected="false" onclick="changeImage(this)">
-                    <img src="./images/3.jpeg" width="100" height="100" loading="lazy" decoding="async" alt="" data-alt="Paul Caruana Art: Guarding the Covenant">
+                    <img src="./images/guarding-the-covenant-art.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Watercolor painting 'Guarding the Covenant' thumbnail" data-alt="Paul Caruana Art: Guarding the Covenant">
                 </button>
                 <button type="button" class="thumb-btn" aria-controls="mainImage" aria-label="View Stella" aria-selected="false" onclick="changeImage(this)">
-                    <img src="./images/4.jpeg" width="100" height="100" loading="lazy" decoding="async" alt="" data-alt="Watercolor Portrait: Stella from Wrinkles Book">
+                    <img src="./images/stella-watercolor-portrait.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Watercolor painting 'Stella' thumbnail" data-alt="Watercolor Portrait: Stella from Wrinkles Book">
                 </button>
                 <button type="button" class="thumb-btn" aria-controls="mainImage" aria-label="View Chasing Chicks" aria-selected="false" onclick="changeImage(this)">
-                    <img src="./images/5.jpeg" width="100" height="100" loading="lazy" decoding="async" alt="" data-alt="Paul Caruana Painting: Chasing Chicks">
+                    <img src="./images/chasing-chicks-painting.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Watercolor painting 'Chasing Chicks' thumbnail" data-alt="Paul Caruana Painting: Chasing Chicks">
                 </button>
             </div>
         </section>

@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://wrinklesbook.com/</loc>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://wrinklesbook.com/images/wrinkles-book-cover.jpg</image:loc>
+      <image:title>Paul Caruana Wrinkles Book Cover</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wrinklesbook.com/images/saints-and-inlaws-watercolor.jpg</image:loc>
+      <image:title>Saints and Inlaws - Watercolor by Paul Caruana</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wrinklesbook.com/images/guarding-the-covenant-art.jpg</image:loc>
+      <image:title>Guarding the Covenant - Art by Paul Caruana</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wrinklesbook.com/images/stella-watercolor-portrait.jpg</image:loc>
+      <image:title>Stella - Watercolor painting from Wrinkles</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wrinklesbook.com/images/chasing-chicks-painting.jpg</image:loc>
+      <image:title>Chasing Chicks - Painting by Paul Caruana</image:title>
+    </image:image>
   </url>
 </urlset>

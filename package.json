@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "npm run minify-css && tsc && vite build",
+    "preview": "vite preview",
+    "minify-css": "csso styles.css --output styles.min.css"
   },
   "devDependencies": {
+    "csso-cli": "^4.0.2",
     "typescript": "~5.9.3",
     "vite": "^7.2.4"
   }
