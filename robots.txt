@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wrinklesbook.com/sitemap.xml

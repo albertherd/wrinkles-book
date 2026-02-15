@@ -15,16 +15,28 @@ body {
     min-height: 100vh;
     
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-bottom: 40px;
 }
 
 .container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     max-width: 1200px;
     gap: 60px;
     margin: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Secondary Content (About/FAQ) */
+.secondary-content.container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+    max-width: 800px; /* Make text readable width */
 }
 
 /* Gallery */
@@ -32,6 +44,9 @@ body {
     flex: 1;
     max-width: 520px;
     text-align: center;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
 }
 
 .main-image {
@@ -183,7 +198,7 @@ h1 {
     box-shadow: 0 6px 16px rgba(0,0,0,0.35);
 }
 
-/* Responsive */
+/* Mobile and Screen Reader Utilities */
 @media (max-width: 900px) {
     body {
         align-items: flex-start;
@@ -200,10 +215,54 @@ h1 {
     }
 }
 
-.page-description {
+.sr-only,
+.page-description, 
+.page-header {
     position: absolute;
-    left: -9999px;
     width: 1px;
     height: 1px;
+    padding: 0;
+    margin: -1px;
     overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+.meta dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 4px 10px;
+    align-items: baseline;
+}
+
+.meta dt {
+    font-weight: 700;
+    color: #e8e6e3;
+}
+
+.meta dd {
+    margin: 0;
+}
+/* Definition List Styles (Key-Value pairs) */
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: 0 0 4px 0; /* Add bottom spacing to separate rows */
+}
+
+dt {
+    font-weight: 700;
+    margin-right: 8px; /* Space between key and value */
+    color: #e8e6e3;    /* Slightly brighter for the "strong" effect */
+}
+
+dd {
+    margin: 0;         /* Remove default browser margin */
+    color: inherit;
 }
