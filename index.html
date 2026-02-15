@@ -160,29 +160,47 @@
         <!-- LEFT: IMAGE GALLERY -->
         <section class="gallery" aria-label="Book Preview Gallery">
             <figure>
-                <img id="mainImage" class="main-image"
-                src="./images/wrinkles-book-cover.jpg"
-                width="600" height="600"
-                fetchpriority="high"
-                alt="Cover of Paul Caruana Wrinkles Book - Hardback Art Book">
+                <picture>
+                    <source srcset="./images/wrinkles-book-cover.webp" type="image/webp">
+                    <img id="mainImage" class="main-image"
+                    src="./images/wrinkles-book-cover.jpg"
+                    width="600" height="600"
+                    fetchpriority="high"
+                    alt="Cover of Paul Caruana Wrinkles Book - Hardback Art Book">
+                </picture>
                 <figcaption class="sr-only">Preview of pages from the Paul Caruana Wrinkles book</figcaption>
             </figure>
             
             <div class="thumbs" role="tablist" aria-label="Book Previews">
                 <button type="button" class="thumb-btn active" aria-controls="mainImage" aria-label="View cover" aria-selected="true" onclick="changeImage(this)">
-                    <img src="./images/wrinkles-book-cover.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Paul Caruana Wrinkles Book Cover thumbnail" data-alt="Paul Caruana Wrinkles Book Cover">
+                    <picture>
+                        <source srcset="./images/wrinkles-book-cover.webp" type="image/webp">
+                        <img src="./images/wrinkles-book-cover.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Paul Caruana Wrinkles Book Cover thumbnail" data-alt="Paul Caruana Wrinkles Book Cover">
+                    </picture>
                 </button>
                 <button type="button" class="thumb-btn" aria-controls="mainImage" aria-label="View Saints and Inlaws" aria-selected="false" onclick="changeImage(this)">
-                    <img src="./images/saints-and-inlaws-watercolor.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Watercolor painting 'Saints and Inlaws' thumbnail" data-alt="Paul Caruana Watercolor Painting: Saints and Inlaws">
+                    <picture>
+                        <source srcset="./images/saints-and-inlaws-watercolor.webp" type="image/webp">
+                        <img src="./images/saints-and-inlaws-watercolor.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Watercolor painting 'Saints and Inlaws' thumbnail" data-alt="Paul Caruana Watercolor Painting: Saints and Inlaws">
+                    </picture>
                 </button>
                 <button type="button" class="thumb-btn" aria-controls="mainImage" aria-label="View Guarding the Covenant" aria-selected="false" onclick="changeImage(this)">
-                    <img src="./images/guarding-the-covenant-art.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Watercolor painting 'Guarding the Covenant' thumbnail" data-alt="Paul Caruana Art: Guarding the Covenant">
+                    <picture>
+                        <source srcset="./images/guarding-the-covenant-art.webp" type="image/webp">
+                        <img src="./images/guarding-the-covenant-art.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Watercolor painting 'Guarding the Covenant' thumbnail" data-alt="Paul Caruana Art: Guarding the Covenant">
+                    </picture>
                 </button>
                 <button type="button" class="thumb-btn" aria-controls="mainImage" aria-label="View Stella" aria-selected="false" onclick="changeImage(this)">
-                    <img src="./images/stella-watercolor-portrait.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Watercolor painting 'Stella' thumbnail" data-alt="Watercolor Portrait: Stella from Wrinkles Book">
+                    <picture>
+                        <source srcset="./images/stella-watercolor-portrait.webp" type="image/webp">
+                        <img src="./images/stella-watercolor-portrait.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Watercolor painting 'Stella' thumbnail" data-alt="Watercolor Portrait: Stella from Wrinkles Book">
+                    </picture>
                 </button>
                 <button type="button" class="thumb-btn" aria-controls="mainImage" aria-label="View Chasing Chicks" aria-selected="false" onclick="changeImage(this)">
-                    <img src="./images/chasing-chicks-painting.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Watercolor painting 'Chasing Chicks' thumbnail" data-alt="Paul Caruana Painting: Chasing Chicks">
+                    <picture>
+                        <source srcset="./images/chasing-chicks-painting.webp" type="image/webp">
+                        <img src="./images/chasing-chicks-painting.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Watercolor painting 'Chasing Chicks' thumbnail" data-alt="Paul Caruana Painting: Chasing Chicks">
+                    </picture>
                 </button>
             </div>
         </section>
@@ -315,11 +333,20 @@
             if (!button) return;
             
             const img = button.querySelector('img');
-            
-            // Update main image
+            const source = button.querySelector('source');
+
+            // Update main image and its source
             const mainImage = document.getElementById("mainImage");
+            
+            // Find the <source> element that is a sibling of #mainImage (inside the same <picture> tag)
+            const mainImageSource = mainImage.previousElementSibling; 
+
             mainImage.src = img.src;
             mainImage.alt = img.dataset.alt || img.alt;
+            
+            if (mainImageSource && source) {
+                mainImageSource.srcset = source.srcset;
+            }
             
             // Remove active state from all buttons
             document.querySelectorAll(".thumb-btn").forEach(b => {
