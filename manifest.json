@@ -1,0 +1,15 @@
+{
+  "name": "Wrinkles by Paul Caruana",
+  "short_name": "Wrinkles",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
