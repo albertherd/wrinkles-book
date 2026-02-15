@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wrinkles Book by Paul Caruana | Watercolor Art Malta</title>
+    
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Wrinkles is the new 272-page art book by Paul Caruana. Featuring watercolor paintings that explore the character of age. Buy Paul Caruana's Wrinkles book online.">
     
@@ -38,20 +44,34 @@
             "datePublished": "2025",
             "inLanguage": "en",
             "bookFormat": "https://schema.org/Hardcover",
-            "numberOfPages": 272,
             "author": {
                 "@type": "Person",
                 "name": "Paul Caruana",
-                "jobTitle": "Artist",
-                "nationality": "Maltese"
+                "sameAs": [
+                    "https://www.wikidata.org/wiki/Q233",
+                    "https://en.wikipedia.org/wiki/Valletta",
+                    "https://www.midseabooks.com"
+                ],
+                "knowsAbout": [
+                    "Malta", 
+                    "Watercolor painting", 
+                    "Valletta"
+                ],
+                "workLocation": {
+                    "@type": "Place",
+                    "name": "Valletta, Malta",
+                    "sameAs": "https://www.wikidata.org/wiki/Q233"
+                }
             },
             "publisher": {
                 "@type": "Organization",
                 "name": "Midsea Books", 
-                "location": "Malta"
+                "location": "Malta",
+                "sameAs": "https://midseabooks.com"
             },
             "image": "https://wrinklesbook.com/images/1.jpeg",
             "description": "Wrinkles is a 272-page hardback art book by Maltese artist Paul Caruana, exploring age and the quiet beauty of lived experience in watercolor paintings.",
+            "genre": "Watercolor Art",
             "review": {
                 "@type": "Review",
                 "reviewRating": {
@@ -70,7 +90,17 @@
                 "priceCurrency": "EUR",
                 "availability": "https://schema.org/InStock",
                 "url": "https://wrinklesbook.com",
-                "itemCondition": "https://schema.org/NewCondition"
+                "itemCondition": "https://schema.org/NewCondition",
+                "areaServed": ["Malta", "Gozo"],
+                "availableDeliveryMethod": [
+                    "https://schema.org/OnSitePickup",
+                    "https://schema.org/FreightDelivery"
+                ],
+                "seller": {
+                    "@type": "Organization",
+                    "name": "Midsea Books",
+                    "areaServed": "Malta"
+                }
             }
         }
     </script>
@@ -98,7 +128,6 @@
                 <strong>Paul Caruana Wrinkles Book</strong> - A 272‑page watercolor art book by Maltese artist <strong>Paul Caruana</strong>.
             </h1>
         </header>
-
         <!-- LEFT: IMAGE GALLERY -->
         <section class="gallery" aria-label="Book Preview Gallery">
             <figure>
@@ -110,12 +139,22 @@
                 <figcaption class="sr-only">Preview of pages from the Paul Caruana Wrinkles book</figcaption>
             </figure>
             
-            <div class="thumbs">
-                <img src="./images/1.jpeg" class="active" width="100" height="100" loading="lazy" decoding="async" alt="Paul Caruana Wrinkles Book Cover" onclick="changeImage(this)">
-                <img src="./images/2.jpeg" width="100" height="100" loading="lazy" decoding="async" alt="Paul Caruana Watercolor Painting: Saints and Inlaws" onclick="changeImage(this)">
-                <img src="./images/3.jpeg" width="100" height="100" loading="lazy" decoding="async" alt="Paul Caruana Art: Guarding the Covenant" onclick="changeImage(this)">
-                <img src="./images/4.jpeg" width="100" height="100" loading="lazy" decoding="async" alt="Watercolor Portrait: Stella from Wrinkles Book" onclick="changeImage(this)">
-                <img src="./images/5.jpeg" width="100" height="100" loading="lazy" decoding="async" alt="Paul Caruana Painting: Chasing Chicks" onclick="changeImage(this)">
+            <div class="thumbs" role="tablist" aria-label="Book Previews">
+                <button type="button" class="thumb-btn active" aria-controls="mainImage" aria-label="View cover" aria-selected="true" onclick="changeImage(this)">
+                    <img src="./images/1.jpeg" width="100" height="100" loading="lazy" decoding="async" alt="" data-alt="Paul Caruana Wrinkles Book Cover">
+                </button>
+                <button type="button" class="thumb-btn" aria-controls="mainImage" aria-label="View Saints and Inlaws" aria-selected="false" onclick="changeImage(this)">
+                    <img src="./images/2.jpeg" width="100" height="100" loading="lazy" decoding="async" alt="" data-alt="Paul Caruana Watercolor Painting: Saints and Inlaws">
+                </button>
+                <button type="button" class="thumb-btn" aria-controls="mainImage" aria-label="View Guarding the Covenant" aria-selected="false" onclick="changeImage(this)">
+                    <img src="./images/3.jpeg" width="100" height="100" loading="lazy" decoding="async" alt="" data-alt="Paul Caruana Art: Guarding the Covenant">
+                </button>
+                <button type="button" class="thumb-btn" aria-controls="mainImage" aria-label="View Stella" aria-selected="false" onclick="changeImage(this)">
+                    <img src="./images/4.jpeg" width="100" height="100" loading="lazy" decoding="async" alt="" data-alt="Watercolor Portrait: Stella from Wrinkles Book">
+                </button>
+                <button type="button" class="thumb-btn" aria-controls="mainImage" aria-label="View Chasing Chicks" aria-selected="false" onclick="changeImage(this)">
+                    <img src="./images/5.jpeg" width="100" height="100" loading="lazy" decoding="async" alt="" data-alt="Paul Caruana Painting: Chasing Chicks">
+                </button>
             </div>
         </section>
         
@@ -227,12 +266,26 @@
 
     <script>
         function changeImage(el) {
-            document.getElementById("mainImage").src = el.src;
-            // Update the main image alt text to match the selected thumbnail for accessibility
-            document.getElementById("mainImage").alt = el.alt;
+            // Find the button (in case the image was somehow the target, though onclick is on button)
+            const button = el.closest('button');
+            if (!button) return;
             
-            document.querySelectorAll(".thumbs img").forEach(img => img.classList.remove("active"));
-            el.classList.add("active");
+            const img = button.querySelector('img');
+            
+            // Update main image
+            const mainImage = document.getElementById("mainImage");
+            mainImage.src = img.src;
+            mainImage.alt = img.dataset.alt || img.alt;
+            
+            // Remove active state from all buttons
+            document.querySelectorAll(".thumb-btn").forEach(b => {
+                b.classList.remove("active");
+                b.setAttribute("aria-selected", "false");
+            });
+            
+            // Add active state to clicked button
+            button.classList.add("active");
+            button.setAttribute("aria-selected", "true");
         }
     </script>
 </body>
