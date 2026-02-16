@@ -1,15 +1,18 @@
 {
   "name": "Wrinkles by Paul Caruana",
   "short_name": "Wrinkles",
+  "description": "The official site for Paul Caruana's Wrinkles art book.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#1a1a1a",
   "theme_color": "#1a1a1a",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "images/logo.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ]
 }
