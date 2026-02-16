@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="styles.min.css">
     <meta name="description" content="Wrinkles is the new 272-page art book by Paul Caruana. Featuring watercolor paintings that explore the character of age. Buy Paul Caruana's Wrinkles book online.">
     
+    <!-- Geo / Local SEO -->
+    <meta name="geo.region" content="MT">
+    <meta name="geo.placename" content="Valletta">
+    <meta name="geo.position" content="35.8989;14.5146">
+    <meta name="ICBM" content="35.8989, 14.5146">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Wrinkles Book by Paul Caruana">
     <meta property="og:description" content="The definitive art book by Paul Caruana. 'Wrinkles' features 272 pages of exquisite watercolor paintings exploring the beauty of age.">
@@ -47,9 +53,27 @@
             "@context": "https://schema.org",
             "@graph": [
                 {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [{
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Art Books",
+                        "item": "https://wrinklesbook.com"
+                    }, {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Wrinkles",
+                        "item": "https://wrinklesbook.com/#book"
+                    }]
+                },
+                {
                     "@type": "Book",
                     "@id": "https://wrinklesbook.com/#book",
                     "name": "Wrinkles",
+                    "sameAs": [
+                        "https://www.amazon.co.uk/dp/9918250674"
+                    ],
+                    "url": "https://wrinklesbook.com",
                     "author": {
                         "@type": "Person",
                         "name": "Paul Caruana",
