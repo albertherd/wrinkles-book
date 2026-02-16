@@ -300,3 +300,130 @@ dd {
     margin: 0;         /* Remove default browser margin */
     color: inherit;
 }
+
+/* Author Section - Layout & Float behavior */
+.author-image {
+    float: left;
+    width: 220px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+/* Ensure image inside respects the container width */
+.author-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .author-image {
+        width: 140px; /* Smaller width for mobile to keep text readable */
+        margin-right: 20px;
+    }
+}
+
+/* --- Refactored Sections --- */
+
+/* Dividers */
+.content-divider {
+    border-top: 1px solid #444;
+    margin: 40px 0;
+}
+
+/* Secondary Content Container Override */
+.secondary-content.container {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 0;
+}
+
+/* Author Section */
+.about-author {
+    overflow: hidden; /* Clears floats */
+}
+
+.about-author .subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}
+
+.author-bio {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #c8c3be;
+    text-align: justify;
+}
+
+.author-bio p {
+    margin-bottom: 1em;
+}
+
+/* FAQ Section */
+.faq {
+    margin-top: 50px;
+}
+
+.faq .subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+.faq-question {
+    cursor: pointer;
+    font-weight: 600;
+    color: #f2f0ed;
+    list-style: none; /* Hide default triangle */
+}
+/* Webkit polyfill for hiding summary marker if needed, though list-style: none usually works */
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-toggle-icon {
+    float: right;
+}
+
+.faq-answer {
+    margin-top: 12px;
+    color: #c8c3be;
+    font-size: 0.95rem;
+}
+
+/* Footer Refactor */
+.site-footer {
+    text-align: center;
+    color: #777;
+    font-size: 0.9em;
+    padding: 40px 20px;
+    border-top: 1px solid #333;
+    margin-top: 50px;
+}
+
+.publisher-note {
+    font-size: 0.85em; 
+    color: #555;
+    margin: 0;
+}
+
+/* Testimonial Quote Styling */
+.testimonial-quote {
+    margin-top: 15px; 
+    font-style: italic; 
+    color: #a8a39e; 
+    border-left: 3px solid #444; 
+    padding-left: 15px;
+}
+
+.testimonial-author {
+    font-size: 0.9em; 
+    font-style: normal; 
+    display: block; 
+    margin-top: 5px;
+}
