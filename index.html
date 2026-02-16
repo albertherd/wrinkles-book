@@ -42,95 +42,94 @@
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Book",
-            "name": "Wrinkles",
-            "description": "Wrinkles is a 272-page hardback art book by Maltese artist Paul Caruana, exploring age and the quiet beauty of lived experience in watercolor paintings.",
-            "image": "https://wrinklesbook.com/images/wrinkles-book-cover.jpg",
-            "isbn": "978-9918-25-067-7",
-            "abridged": false,
-            "bookFormat": "https://schema.org/Hardcover",
-            "numberOfPages": 272,
-            "inLanguage": "en",
-            "datePublished": "2025",
-            "keywords": "art, watercolor, malta, valletta, portraiture, aging, book, melitensia, paul caruana",
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5",
-                "reviewCount": "1"
-            },
-            "author": {
-                "@type": "Person",
-                "name": "Paul Caruana",
-                "jobTitle": "Artist",
-                "sameAs": [
-                    "https://www.facebook.com/paulcwatercolor/",
-                    "https://timesofmalta.com/article/wrinkles-recollections-time-gone.1116803"
-                ]
-            },
-            "contributor": {
-                "@type": "Person",
-                "name": "Dr Moira Borg",
-                "jobTitle": "Foreword Author"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "Midsea Books",
-                "url": "https://mid seabooks.com/"
-            },
-            "offers": {
-                "@type": "Offer",
-                "price": "75.00",
-                "priceCurrency": "EUR",
-                "priceValidUntil": "2026-12-31",
-                "availability": "https://schema.org/InStock",
-                "url": "https://wrinklesbook.com",
-                "itemCondition": "https://schema.org/NewCondition",
-                "areaServed": {
-                    "@type": "Country",
-                    "name": "Malta"
-                },
-                "hasMerchantReturnPolicy": {
-                    "@type": "MerchantReturnPolicy",
-                    "applicableCountry": "MT",
-                    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-                    "merchantReturnDays": 30,
-                    "returnMethod": "https://schema.org/ReturnByMail",
-                    "returnFees": "https://schema.org/FreeReturn"
-                },
-                "shippingDetails": {
-                    "@type": "OfferShippingDetails",
-                    "shippingRate": {
-                        "@type": "MonetaryAmount",
-                        "value": "0",
-                        "currency": "EUR"
+            "@graph": [
+                {
+                    "@type": "Book",
+                    "@id": "https://wrinklesbook.com/#book",
+                    "name": "Wrinkles",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Paul Caruana",
+                        "sameAs": [
+                            "https://www.facebook.com/paulcwatercolor",
+                            "https://timesofmalta.com/article/the-visual-fairytales-of-paul-caruana.1102573"
+                        ]
                     },
-                    "shippingDestination": {
-                        "@type": "DefinedRegion",
-                        "addressCountry": "MT"
+                    "illustrator": {
+                        "@type": "Person",
+                        "name": "Paul Caruana"
+                    },
+                    "datePublished": "2025-01-01",
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Midsea Books",
+                        "url": "https://midseabooks.com"
+                    },
+                    "numberOfPages": 272,
+                    "inLanguage": "en",
+                    "isbn": "978-9918-25-067-7",
+                    "bookFormat": "https://schema.org/Hardcover",
+                    "image": "https://wrinklesbook.com/images/wrinkles-book-cover.jpg",
+                    "description": "Wrinkles is a 272-page hardback art book by Maltese artist Paul Caruana, exploring age and the quiet beauty of lived experience in watercolor paintings."
+                },
+                {
+                    "@type": "Product",
+                    "@id": "https://wrinklesbook.com/#product",
+                    "name": "Wrinkles by Paul Caruana",
+                    "image": "https://wrinklesbook.com/images/wrinkles-book-cover.jpg",
+                    "description": "Hardback art book featuring watercolor paintings of Maltese life.",
+                    "sku": "WRINKLES-HB-001",
+                    "isbn": "978-9918-25-067-7",
+                    "gtin13": "9789918250677",
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "Paul Caruana"
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "75.00",
+                        "priceCurrency": "EUR",
+                        "priceValidUntil": "2026-12-31",
+                        "itemCondition": "https://schema.org/NewCondition",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://wrinklesbook.com",
+                        "sku": "WRINKLES-HB-001",
+                        "shippingDetails": {
+                            "@type": "OfferShippingDetails",
+                            "shippingRate": {
+                                "@type": "MonetaryAmount",
+                                "value": "0",
+                                "currency": "EUR"
+                            },
+                            "shippingDestination": {
+                                "@type": "DefinedRegion",
+                                "addressCountry": "MT"
+                            }
+                        }
+                    },
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "5",
+                        "reviewCount": "1"
+                    },
+                    "review": {
+                        "@type": "Review",
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": "5"
+                        },
+                        "author": {
+                            "@type": "Person",
+                            "name": "Dr Moira Borg"
+                        },
+                        "datePublished": "2025-01-01",
+                        "reviewBody": "Paul Caruana's Wrinkles speaks to the Child of each and every one of us who is open to listen and encourages us to find our guiding light."
+                    },
+                    "mainEntityOfPage": {
+                        "@id": "https://wrinklesbook.com/#book"
                     }
-                },
-                "availableDeliveryMethod": [
-                    "https://schema.org/OnSitePickup",
-                    "https://schema.org/FreightDelivery"
-                ],
-                "seller": {
-                    "@type": "Organization",
-                    "name": "Midsea Books"
                 }
-            },
-            "review": {
-                "@type": "Review",
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5"
-                },
-                "author": {
-                    "@type": "Person",
-                    "name": "Dr Moira Borg"
-                },
-                "datePublished": "2025-01-01",
-                "reviewBody": "Excerpt from the Foreword: \"Paul Caruana's Wrinkles speaks to the Child of each and every one of us who is open to listen and encourages us to find our guiding light.\""
-            }
+            ]
         }
     </script>
     <script type="application/ld+json">
