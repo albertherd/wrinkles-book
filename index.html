@@ -26,10 +26,11 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://wrinklesbook.com">
-    <meta property="og:type" content="book">
+    <meta property="og:type" content="product">
     <meta property="og:locale" content="en_GB">
     <meta property="product:price:amount" content="75.00">
     <meta property="product:price:currency" content="EUR">
+    <meta property="product:availability" content="in stock">
     <meta property="og:image:alt" content="Wrinkles - Hardback watercolor art book by Paul Caruana featuring a portrait of an elderly man">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="book:isbn" content="978-9918-25-067-7">
@@ -58,79 +59,46 @@
                     "itemListElement": [{
                         "@type": "ListItem",
                         "position": 1,
-                        "name": "Art Books",
+                        "name": "Home",
                         "item": "https://wrinklesbook.com"
                     }, {
                         "@type": "ListItem",
                         "position": 2,
-                        "name": "Wrinkles",
-                        "item": "https://wrinklesbook.com/#book"
+                        "name": "Wrinkles Book",
+                        "item": "https://wrinklesbook.com"
                     }]
                 },
                 {
-                    "@type": "Book",
-                    "@id": "https://wrinklesbook.com/#book",
+                    "@type": ["Product", "Book"],
+                    "@id": "https://wrinklesbook.com/#product",
                     "name": "Wrinkles",
-                    "sameAs": [
-                        "https://www.amazon.co.uk/dp/9918250674"
-                    ],
-                    "url": "https://wrinklesbook.com",
-                    "author": {
-                        "@type": "Person",
-                        "name": "Paul Caruana",
-                        "image": "https://wrinklesbook.com/images/paul-caruana-artist-malta.jpg",
-                        "jobTitle": "Artist",
-                        "sameAs": [
-                            "https://www.facebook.com/paulcwatercolor",
-                            "https://timesofmalta.com/article/the-visual-fairytales-of-paul-caruana.1102573"
-                        ]
-                    },
-                    "illustrator": {
-                        "@type": "Person",
-                        "name": "Paul Caruana"
-                    },
-                    "datePublished": "2025-01-01",
-                    "publisher": {
-                        "@type": "Organization",
-                        "name": "Midsea Books",
-                        "url": "https://midseabooks.com"
-                    },
-                    "numberOfPages": 272,
-                    "inLanguage": "en",
+                    "description": "Wrinkles is a 272-page hardback art book by Maltese artist Paul Caruana, exploring age and the quiet beauty of lived experience in watercolor paintings.",
+                    "image": "https://wrinklesbook.com/images/wrinkles-book-cover.jpg",
+                    "sku": "WRINKLES-HB-001",
+                    "gtin13": "9789918250677",
                     "isbn": "978-9918-25-067-7",
                     "bookFormat": "https://schema.org/Hardcover",
-                    "image": "https://wrinklesbook.com/images/wrinkles-book-cover.jpg",
-                    "description": "Wrinkles is a 272-page hardback art book by Maltese artist Paul Caruana, exploring age and the quiet beauty of lived experience in watercolor paintings."
-                },
-                {
-                    "@type": "Product",
-                    "@id": "https://wrinklesbook.com/#product",
-                    "name": "Wrinkles by Paul Caruana",
-                    "image": "https://wrinklesbook.com/images/wrinkles-book-cover.jpg",
-                    "description": "Hardback art book featuring watercolor paintings of Maltese life.",
-                    "sku": "WRINKLES-HB-001",
-                    "isbn": "978-9918-25-067-7",
-                    "gtin13": "9789918250677",
-                    "brand": {
-                        "@type": "Brand",
+                    "numberOfPages": 272,
+                    "inLanguage": "en",
+                    "author": {
+                        "@type": "Person",
                         "name": "Paul Caruana"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Midsea Books"
                     },
                     "offers": {
                         "@type": "Offer",
-                        "price": "75.00",
+                        "url": "https://wrinklesbook.com",
                         "priceCurrency": "EUR",
+                        "price": "75.00",
                         "priceValidUntil": "2026-12-31",
                         "itemCondition": "https://schema.org/NewCondition",
                         "availability": "https://schema.org/InStock",
-                        "url": "https://wrinklesbook.com",
-                        "sku": "WRINKLES-HB-001",
-                        "hasMerchantReturnPolicy": {
-                            "@type": "MerchantReturnPolicy",
-                            "applicableCountry": "MT",
-                            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-                            "merchantReturnDays": 30,
-                            "returnMethod": "https://schema.org/ReturnByMail",
-                            "returnFees": "https://schema.org/FreeReturn"
+                        "seller": {
+                            "@type": "Person",
+                            "name": "Paul Caruana"
                         },
                         "shippingDetails": {
                             "@type": "OfferShippingDetails",
@@ -158,6 +126,14 @@
                                     "unitCode": "DAY"
                                 }
                             }
+                        },
+                        "hasMerchantReturnPolicy": {
+                            "@type": "MerchantReturnPolicy",
+                            "applicableCountry": "MT",
+                            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                            "merchantReturnDays": 30,
+                            "returnMethod": "https://schema.org/ReturnByMail",
+                            "returnFees": "https://schema.org/FreeReturn"
                         }
                     },
                     "aggregateRating": {
@@ -179,7 +155,8 @@
                         "reviewBody": "Paul Caruana's Wrinkles speaks to the Child of each and every one of us who is open to listen and encourages us to find our guiding light."
                     },
                     "mainEntityOfPage": {
-                        "@id": "https://wrinklesbook.com/#book"
+                        "@type": "WebPage",
+                        "@id": "https://wrinklesbook.com"
                     }
                 }
             ]
@@ -261,6 +238,7 @@
             
             <div class="price-delivery">
                 <p class="price">€75.00</p>
+                <p class="stock-status">In stock</p>
                 <p class="delivery">Valletta pickup • Free delivery across Malta • International shipping on request</p>
             </div>
             
