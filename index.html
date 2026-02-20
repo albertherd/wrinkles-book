@@ -69,7 +69,7 @@
                     }]
                 },
                 {
-                    "@type": ["Product", "Book"],
+                    "@type": "Product",
                     "@id": "https://wrinklesbook.com/#product",
                     "name": "Wrinkles",
                     "description": "Wrinkles is a 272-page hardback art book by Maltese artist Paul Caruana, exploring age and the quiet beauty of lived experience in watercolor paintings.",
@@ -87,6 +87,10 @@
                     "publisher": {
                         "@type": "Organization",
                         "name": "Midsea Books"
+                    },
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "Paul Caruana"
                     },
                     "offers": {
                         "@type": "Offer",
@@ -173,6 +177,53 @@
                 "target": "https://wrinklesbook.com/?q={search_term_string}",
                 "query-input": "required name=search_term_string"
             }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "ImageObject",
+                    "contentUrl": "https://wrinklesbook.com/images/saints-and-inlaws-watercolor.jpg",
+                    "name": "Saints and Inlaws",
+                    "description": "Watercolor painting by Paul Caruana",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Paul Caruana"
+                    }
+                },
+                {
+                    "@type": "ImageObject",
+                    "contentUrl": "https://wrinklesbook.com/images/guarding-the-covenant-art.jpg",
+                    "name": "Guarding the Covenant",
+                    "description": "Watercolor painting by Paul Caruana",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Paul Caruana"
+                    }
+                },
+                {
+                    "@type": "ImageObject",
+                    "contentUrl": "https://wrinklesbook.com/images/stella-watercolor-portrait.jpg",
+                    "name": "Stella",
+                    "description": "Watercolor portrait by Paul Caruana",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Paul Caruana"
+                    }
+                },
+                {
+                    "@type": "ImageObject",
+                    "contentUrl": "https://wrinklesbook.com/images/chasing-chicks-painting.jpg",
+                    "name": "Chasing Chicks",
+                    "description": "Watercolor painting by Paul Caruana",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Paul Caruana"
+                    }
+                }
+            ]
         }
     </script>
 </head>
@@ -311,13 +362,13 @@
 
                 <!-- Text Content (will wrap around) -->
                 <p>
-                    <strong>Paul Caruana</strong> is a celebrated Maltese artist known for his ability to paint a life that has now disappeared. Growing up in the capital city of <strong>Valletta</strong>, his watercolors document the social history of the Maltese Islands, capturing a time when entire days were spent playing in the streets, before technology changed the community life his generation knew.
+                    <strong>Paul Caruana</strong> is a celebrated Maltese artist known for his ability to paint a life that has now disappeared. Growing up in the capital city of <strong>Valletta</strong>, his watercolors document the social history of the Maltese Islands.
                 </p>
                 <p>
-                    "My aim isn't to wow the viewer with technique," Caruana says. "My aim is to make you stop and forget life for a few seconds and transport you to a world where everything was simpler, less hectic."
+                    His work serves as both a comprehensive art collection and a memoir of those formative years. Structuring personal recollections as "visual fairytales," his softly executed watercolors recount this Mediterranean ethnography with humour, warmth, and deep nostalgia.
                 </p>
-                <p>
-                    After his father passed away when Paul was just 16, he became the breadwinner for his family, painting at night whenever he could. <em>Wrinkles</em> serves as both a comprehensive art collection and a memoir of those formative years - living in Valletta, Rabat, and Mdina. Structuring personal recollections as "visual fairytales," the book features softly executed watercolors that recount this Mediterranean ethnography with humour, warmth, and deep nostalgia.
+                <p style="margin-top: 1.5rem;">
+                    <a href="/paul-caruana.html" class="btn btn-offline" style="display: inline-block; padding: 0.5rem 1rem; text-decoration: none;">Read more about the artist</a>
                 </p>
             </div>
         </section>

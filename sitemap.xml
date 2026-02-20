@@ -26,4 +26,14 @@
       <image:title>Chasing Chicks - Painting by Paul Caruana</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://wrinklesbook.com/paul-caruana.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://wrinklesbook.com/images/paul-caruana-artist-malta.jpg</image:loc>
+      <image:title>Paul Caruana - Maltese Watercolor Artist</image:title>
+    </image:image>
+  </url>
 </urlset>
